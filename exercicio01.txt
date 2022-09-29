@@ -1,0 +1,118 @@
+
+
+// Bibliotecas utilizadas 
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+ 
+ //Declaracao das variáveis utilizadas 
+int matricula = 202210202;
+char nome[20] = "Isabelle Correa";
+char curso[20] = "Ciencia de Dados";
+char uni[20] = "Unilasalle";
+
+int opcao;
+int num;
+double squareRoot;
+
+int calculo;
+int a, b, soma, subtracao, divisao;
+
+
+int main()
+{
+
+    printf("Nome: %s \n", nome);
+    printf("Nome: %s \n", curso);
+    printf("Nome: %s \n", uni);
+    printf("Matricula: %d \n", matricula);
+	
+	printf("Olá Isabelle! Qual operação deseja realizar?\n");
+
+    printf(" 1 - Calcular raiz quadrada \n 2 - + | * | / | potencia \n");
+    scanf(" %d", &opcao);
+    
+            if (opcao == 1) //resolver raiz
+             {
+                  printf("Informe o numero: ");
+                  scanf("%d", &num);
+        
+                     squareRoot = sqrt(num);
+        
+                        printf("Resultado da raiz: %.f ", squareRoot);
+              }
+            if (opcao == 2) //calculos diversos
+            {
+                printf("Informe o calculo que deseja realizar:\n 1 para soma\n 2 para subtraçao\n 3 para dividir\n 4 para potência\n" );
+                scanf("%d", &calculo);
+
+                    if (calculo == 1) // resolver soma
+                    {
+                        printf("Digite o primeiro número inteiro para somar: ");
+                        scanf("%d", &a); 
+
+                        printf("Digite o segundo número inteiro para somar: ");
+                        scanf("%d", &b);
+
+                        soma = a + b ; 
+
+                        printf("O resultado da soma é = %d\n", soma);
+
+                    }
+
+                    if(calculo == 2) // resolver subtracao
+                    {
+                        printf("Digite o primeiro número inteiro para subtrair: ");
+                        scanf("%d", &a);
+
+                        printf("Digite o segundo número inteiro para subtrair: ");
+                        scanf("%d", &b);
+
+                        subtracao = a - b ; 
+
+                        printf("O resultado da subtracao é: %d\n", subtracao);
+
+                    }
+
+                    if(calculo == 3) // resolver divisao
+                    {
+
+                       printf("Digite o número que deseja dividir: ");
+                       scanf("%d", &a); 
+                       
+                       printf("Digite um número para dividir: ");
+                       scanf("%d", &b);
+
+                       divisao = a / b ; 
+
+                       printf("O resultado da divisao é: %d\n", divisao );
+                    }
+
+                    if(calculo == 4) // resolver potencia
+                    {
+                        printf("Digite um número: ");
+                        scanf("%d", &a); 
+                       
+                       printf("Digite a potência: ");
+                       scanf("%d", &b);
+
+                       double result = pow(a, b);
+
+                        printf("A potência de %d é: %f", a,result );
+
+
+
+                    }
+
+
+             } 
+
+             
+
+return 0;
+}
+
+
+// https://ciksiti.com/pt/chapters/9006-sqrt-function-in-c referencia para a raiz
+// http://linguagemc.com.br/operacoes-de-entrada-e-saida-de-dados-em-linguagem-c/ referencia para calculo soma
+// https://acervolima.com/funcao-power-em-c-c/#:~:text=pow()%20%C3%A9%20uma%20fun%C3%A7%C3%A3o,%5E%202%2C%20que%20%C3%A9%2016. referencia para a potencia
